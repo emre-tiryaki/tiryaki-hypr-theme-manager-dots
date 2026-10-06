@@ -2,6 +2,7 @@ pragma Singleton
 
 import QtQml
 import Quickshell
+import Quickshell.Io
 import "."
 
 QtObject {

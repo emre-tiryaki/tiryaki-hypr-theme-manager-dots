@@ -9,13 +9,21 @@ if [[ -z "$WALLPAPER" ]]; then
     exit 1
 fi
 
+WALLPAPER="$(realpath "$WALLPAPER")"
+
 if [[ ! -f "$WALLPAPER" ]]; then
     echo "Wallpaper not found: $WALLPAPER"
     exit 1
 fi
 
-WALLPAPER="$(realpath "$WALLPAPER")"
+echo "Setting wallpaper: $WALLPAPER"
 
 awww img "$WALLPAPER"
 
-matugen image "$WALLPAPER"
+echo "Generating theme..."
+
+matugen image "$WALLPAPER" --source-color-index 0
+
+hyprctl reload
+
+"$HOME/.config/hypr-theme-manager/bin/reload-topbar"

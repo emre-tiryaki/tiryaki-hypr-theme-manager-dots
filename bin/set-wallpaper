@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+WALLPAPER="${1:-}"
+
+if [[ -z "$WALLPAPER" ]]; then
+    echo "Usage: set-wallpaper <wallpaper>"
+    exit 1
+fi
+
+if [[ ! -f "$WALLPAPER" ]]; then
+    echo "Wallpaper not found: $WALLPAPER"
+    exit 1
+fi
+
+WALLPAPER="$(realpath "$WALLPAPER")"
+
+awww img "$WALLPAPER"
+
+matugen image "$WALLPAPER"

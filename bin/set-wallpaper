@@ -25,5 +25,3 @@ echo "Generating theme..."
 matugen image "$WALLPAPER" --source-color-index 0
 
 hyprctl reload
-
-"$HOME/.config/hypr-theme-manager/bin/reload-topbar"

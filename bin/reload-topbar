@@ -1,9 +1,0 @@
-#!/usr/bin/env bash
-
-set -euo pipefail
-
-pkill -f "quickshell.*topbar" || true
-
-sleep 0.2
-
-quickshell -p "$HOME/.config/topbar"

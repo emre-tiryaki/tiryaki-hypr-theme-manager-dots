@@ -39,6 +39,10 @@ QtObject {
     property color bluetoothActive: "#85d2e8"
     property color bluetoothDisabled: "#899295"
 
+    property color batteryCharging: "#c0c4eb"
+    property color batteryLow: "#ffb4ab"
+    property color batteryNormal: "#85d2e8"
+
     property real surfaceOpacity: 0.92
     property real borderOpacity: 0.55
 }

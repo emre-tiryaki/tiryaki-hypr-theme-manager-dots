@@ -14,6 +14,12 @@ QtObject {
             property string name: "topbar"
             property string type: "quickshell"
             property string path: $HOME + "/.config/topbar"
+        },
+
+        QtObject {
+            property string name: "thunar"
+            property string type: "gtk"
+            property string path: $HOME + "/.config/gtk-3.0/gtk.css"
         }
     ]
 }
